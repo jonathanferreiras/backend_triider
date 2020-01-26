@@ -34,17 +34,20 @@ Temos 2 rotas principais, de usuario e de horários:
 #### Usuários
 
 - POST: 
+
 	**localhost/user:** cria um usuário/animador. **[1]**
 	**localhost/login:**  loga o usuário/animador. **[2]**
 - GET:
+
 	**localhost/user:** busca animadores por tipo. **[3]**
 
 #### Horários
 - POST: 
+
 	**localhost/schedules:** cria um novo horário. **[4]**
 - GET:
+
 	**localhost/schedules:**  busca os horários dos animadores. **[5]**
-    
     **localhost/schedules/{id}:** Busca horários marcados pelo usuário. **[6]**
 
 
