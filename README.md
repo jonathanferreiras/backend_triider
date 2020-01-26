@@ -34,36 +34,36 @@ Temos 2 rotas principais, de usuario e de horários:
 #### Usuários
 
 - POST: 
-	**localhost/user: ** cria um usuário/animador. **[1]**
+	**localhost/user:** cria um usuário/animador. **[1]**
 	**localhost/login:**  loga o usuário/animador. **[2]**
 - GET:
-	**localhost/user: ** Busca animadores por tipo. **[3]**
+	**localhost/user:** busca animadores por tipo. **[3]**
 
 #### Horários
 - POST: 
-	**localhost/schedules: ** cria um novo horário. **[4]**
+	**localhost/schedules:** cria um novo horário. **[4]**
 - GET:
 	**localhost/schedules:**  busca os horários dos animadores. **[5]**
-	**localhost/schedules/{id}: ** Busca horários marcados pelo usuário. **[6]**
+    **localhost/schedules/{id}:** Busca horários marcados pelo usuário. **[6]**
 
 
 ### Uso pelo frontend
 
-A API foi bem básica sem a utiização de autenticação por tokens. Foi utilizado o id do usuário para identificação. Não foi realizado o frontend a tempo porém segue a rotina do app:
+A API foi bem básica sem a utilização de autenticação por tokens. Foi utilizado o id do usuário para identificação. Não foi realizado o frontend a tempo porém segue a rotina do app:
 
 - O usuário irá se cadastrar pela rota [1], após o cadastro o mesmo irá logar pela rota [2]. Na requisição de login [2] o usuário irá receber seu ID que ficaria vinculado na sessão ou por cookie.
 
 - Ao solicitar um tipo de animador o front irá requisitar a rota [3] retornando todos os usuários cadastrados daquele tipo de animador.
 
-- Ao verificar a agenda o front requisitará a rota [5], passando o tipo de animador, a data inicial e final. Ao receber os dados de horários já marcados para aqueles animadores o front poderá invalidar aqueles horários para o cliente escolher.
+- Ao verificar a agenda o front requisitará a rota [5], passando o tipo de animador, a data inicial e final. Ao receber os dados de horários já marcados para aqueles animadores o front poderá invalidar os mesmos horários para o cliente escolher.
 
-- O cliente então marcar o horário, local e etc. O front realiza um post para a rota[4].
+- O cliente então preenche o horário, local e etc. O front realiza um post para a rota[4].
 
 - Caso o cliente queira verificar os horários marcados basta realizar a requisição na rota[6].
 
 
 
-Esta API foi realizada com o intuito de realizar uma API simples. Acredito que no futuro com um numero maior de animadores a rota [5] causaria congestionamento no BD e deveria ser revista. 
+Esta API foi realizada com o intuito de realizar uma algo simples que resolva o problema proposto. Acredito que no futuro com um numero maior de animadores a rota [5] causaria congestionamento no BD e deveria ser revista. 
 
 
 ### Dependências
