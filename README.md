@@ -44,6 +44,7 @@ Temos 2 rotas principais, de usuario e de horários:
 	**localhost/schedules:** cria um novo horário. **[4]**
 - GET:
 	**localhost/schedules:**  busca os horários dos animadores. **[5]**
+    
     **localhost/schedules/{id}:** Busca horários marcados pelo usuário. **[6]**
 
 
